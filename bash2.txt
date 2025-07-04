@@ -1,0 +1,499 @@
+Last login: Fri Jul  4 12:27:09 on ttys021
+ksu@MacBook-Air-Borisova ~ % touch bash2.txt
+ksu@MacBook-Air-Borisova ~ % cd
+ksu@MacBook-Air-Borisova ~ % mkdir test3
+ksu@MacBook-Air-Borisova ~ % cd test3
+ksu@MacBook-Air-Borisova test3 % echo -e "row1\nrow2\nrow3\nrow4" > 4
+echo -e "row1\nrow2\nrow3\nrow4" > 5
+echo -e "row1\nrow2\nrow3\nrow4" > 6
+ksu@MacBook-Air-Borisova test3 % grep "row2" 5  
+row2
+ksu@MacBook-Air-Borisova test3 % grep "row" *  
+4:row1
+4:row2
+4:row3
+4:row4
+5:row1
+5:row2
+5:row3
+5:row4
+6:row1
+6:row2
+6:row3
+6:row4
+ksu@MacBook-Air-Borisova test3 % grep -c "row" 6 
+4
+ksu@MacBook-Air-Borisova test3 % find . -name 5 
+./5
+ksu@MacBook-Air-Borisova test3 % find . -name "5" -delete 
+ksu@MacBook-Air-Borisova test3 % echo "test" > 4 
+ksu@MacBook-Air-Borisova test3 % cat 4
+test
+ksu@MacBook-Air-Borisova test3 % sed -i '' 's/test/fail/g' 4 
+ksu@MacBook-Air-Borisova test3 % cat 4
+fail
+ksu@MacBook-Air-Borisova test3 % echo "test" >> 4 
+ksu@MacBook-Air-Borisova test3 % cd ..
+ksu@MacBook-Air-Borisova ~ % ps aux
+USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
+ksu              36463 249.9  5.9 1867448480 493264   ??  S    Fri08PM  57:02.48 /Applications/Go
+ksu              85526   7.2  0.7 427026176  55728   ??  Ss   Wed07PM   0:06.18 /System/Library/
+root               138   5.9  0.1 426958240   9312   ??  Ss   12May25  25:46.55 /usr/libexec/ope
+_windowserver      169   3.6  1.2 413884000  96944   ??  Ss   12May25 1235:24.03 /System/Library/
+ksu                432   1.5  0.0 426918816   4144   ??  S    12May25  14:03.47 /usr/sbin/cfpref
+root               744   1.0  0.2 411902192  14048   ??  Ss   12May25  64:12.36 /Applications/Cl
+ksu              36444   0.9  0.8 444547632  64320   ??  S    Fri08PM  28:31.13 /Applications/Go
+root               127   0.8  0.2 427071200  19440   ??  Ss   12May25  62:29.25 /System/Library/
+root               381   0.8  0.5 445002800  41888   ??  Ss   12May25  66:15.47 /System/Library/
+ksu              90704   0.7  0.3 426993472  25472   ??  S     3:04PM   0:27.97 /usr/libexec/due
+root               174   0.7  0.2 426964384  14160   ??  Ss   12May25  58:27.73 /usr/libexec/run
+ksu              85515   0.6  0.3 426970672  25888   ??  S    Wed07PM   0:21.30 /System/Library/
+ksu              34943   0.6  0.3 411080896  23440   ??  Ss   Fri08PM   8:17.18 /System/Library/
+root               110   0.3  0.1 426956448   7856   ??  Ss   12May25  31:58.04 /usr/libexec/con
+ksu               1670   0.3  0.6 413495200  52064   ??  S    12May25  22:07.43 /System/Library/
+root               100   0.3  0.1 427023856  10720   ??  Ss   12May25  43:49.53 /usr/libexec/log
+ksu              36434   0.3  2.4 478615616 199104   ??  S    Fri08PM  34:50.93 /Applications/Go
+root                 1   0.1  0.1 426856688   8992   ??  Ss   12May25  97:52.38 /sbin/launchd
+root               164   0.1  0.1 426949984   6096   ??  Ss   12May25  31:30.39 /usr/libexec/cor
+root               162   0.1  0.0 426916336   3088   ??  Ss   12May25  11:47.36 /usr/sbin/notify
+root               104   0.1  0.1 426922896   4272   ??  Ss   12May25  25:23.26 /System/Library/
+ksu              92548   0.1  0.1 426929520  11232   ??  Ss    8:32AM   0:00.30 /System/Library/
+ksu              41641   0.1  0.8 412677072  70128   ??  S    Sat02PM  44:51.42 /Applications/Te
+ksu              96005   0.0  0.2 427126736  13968   ??  S     2:44PM   0:00.31 /System/Cryptexe
+ksu              95996   0.0  0.2 426963472  19872   ??  S     2:44PM   0:00.25 /System/Library/
+ksu              95988   0.0  0.2 426969472  17904   ??  S     2:43PM   0:00.85 /System/Library/
+ksu              95986   0.0  0.1 426916432   8000   ??  S     2:43PM   0:00.05 /System/Library/
+ksu              95985   0.0  0.1 426950368  11024   ??  S     2:43PM   0:00.20 /System/Library/
+root             95978   0.0  0.0 410755344   2032   ??  Ss    2:43PM   0:00.03 /usr/libexec/onl
+root             95962   0.0  0.1 426967984  11904   ??  Ss    2:43PM   0:00.58 /System/Library/
+ksu              95961   0.0  0.2 426966048  18096   ??  S     2:43PM   0:02.83 /usr/libexec/rep
+root             95960   0.0  0.1 426951376   7776   ??  Ss    2:43PM   0:00.10 /usr/libexec/osp
+ksu              95958   0.0  0.1 426912672   6624   ??  S     2:43PM   0:00.04 /usr/libexec/fee
+ksu              95957   0.0  0.1 426951312   4848   ??  Ss    2:43PM   0:00.20 /System/Library/
+ksu              95956   0.0  0.1 426950064   6704   ??  S     2:43PM   0:00.13 /System/Library/
+ksu              95955   0.0  0.1 426916144   5104   ??  S     2:43PM   0:00.40 /System/Library/
+ksu              95954   0.0  0.1 426916736   5008   ??  S     2:43PM   0:00.10 /usr/libexec/gam
+_gamecontrollerd 95953   0.0  0.1 426916880   6992   ??  Ss    2:43PM   0:00.13 /usr/libexec/gam
+ksu              95951   0.0  0.1 426946064   6336   ??  S     2:43PM   0:00.06 /System/Library/
+ksu              95932   0.0  1.6 1865469040 138272   ??  S     2:41PM   0:04.62 /Applications/Go
+ksu              95882   0.0  0.1 426896224   4768   ??  Ss    2:39PM   0:07.76 /System/Library/
+root             95824   0.0  0.1 426951360   5920   ??  Ss    2:36PM   0:00.08 /usr/libexec/rtc
+root             95787   0.0  0.0 426912704   1168   ??  Ss    2:33PM   0:00.03 /usr/libexec/smd
+ksu              95763   0.0  0.1 426980048  10240   ??  Ss    2:33PM   0:00.71 /System/Library/
+ksu              95762   0.0  0.2 426965744  13600   ??  S     2:33PM   0:00.72 cloudphotod
+root             95655   0.0  0.0 426949344   4192   ??  Ss    2:28PM   0:00.39 /System/Library/
+root             95648   0.0  0.1 426950784   5280   ??  Ss    2:28PM   0:00.10 /usr/libexec/cou
+_cmiodalassistants 95632   0.0  0.1 426952608   8656   ??  S     2:28PM   0:00.17 /System/Library/
+_locationd       95631   0.0  0.1 426952608   8768   ??  S     2:28PM   0:00.20 /System/Library/
+root             95626   0.0  0.1 426953776   9344   ??  S     2:28PM   0:00.29 /System/Library/
+ksu              95614   0.0  0.2 427133264  12752   ??  S     2:26PM   0:00.68 /System/Cryptexe
+ksu              95509   0.0  0.2 411021360  15472   ??  S     2:21PM   0:00.17 /System/Library/
+ksu              95508   0.0  0.2 427002848  19056   ??  S     2:21PM   0:00.36 /System/Library/
+root             95503   0.0  0.0 426945888   2496   ??  Ss    2:21PM   0:00.03 /System/Library/
+ksu              95338   0.0  0.1 426957680   8576   ??  S     2:14PM   0:02.61 /System/Library/
+root             95278   0.0  0.4 426961392  30784   ??  Ss    2:12PM   0:17.51 /usr/libexec/mob
+root             95271   0.0  0.0 426951168   2896   ??  Ss    2:12PM   0:00.05 /usr/libexec/san
+root             95270   0.0  0.0 426950576   3936   ??  Ss    2:12PM   0:00.07 /usr/libexec/amf
+ksu              95178   0.0  1.3 1865456048 111984   ??  S     2:08PM   0:04.39 /Applications/Go
+ksu              94910   0.0  0.4 427761440  37040   ??  S     1:56PM   0:01.05 /System/Library/
+ksu              94907   0.0  0.2 411287872  17856   ??  S     1:56PM   0:00.32 /System/Library/
+ksu              94886   0.0  0.2 411620192  16416   ??  Ss    1:55PM   0:27.03 /Applications/Ou
+ksu              94874   0.0  1.2 1865661936  96960   ??  S     1:55PM   0:00.86 /Applications/Go
+ksu              94871   0.0  0.1 426953888   9824   ??  S     1:55PM   0:00.30 /System/Library/
+ksu              94868   0.0  0.2 427045792  19664   ??  S     1:55PM   0:07.01 /System/Library/
+ksu              94866   0.0  0.1 426961840  11632   ??  S     1:55PM   0:00.60 /usr/libexec/swc
+_netbios         94851   0.0  0.0 426917104   2384   ??  SNs   1:55PM   0:00.13 /usr/sbin/netbio
+ksu              94810   0.0  1.1 1865448368  94368   ??  S     1:52PM   0:01.58 /Applications/Go
+ksu              94628   0.0  0.3 411527248  24352   ??  S     1:50PM   0:00.19 /System/Library/
+root             94627   0.0  0.1 426951376   5520   ??  Ss    1:50PM   0:01.15 /usr/libexec/nes
+ksu              94587   0.0  0.3 427123200  23328   ??  S     1:42PM   0:00.30 /System/Library/
+ksu              94584   0.0  0.2 426981552  15264   ??  S     1:42PM   0:00.25 /System/Library/
+ksu              94198   0.0  0.0 410780800   2560 s021  S     1:04PM   0:00.11 -zsh
+root             94197   0.0  0.0 410751920   3280 s021  Ss    1:04PM   0:00.03 login -pf ksu
+ksu              93918   0.0  0.5 477734032  43536   ??  S    12:54PM   0:00.38 /Applications/Go
+ksu              93917   0.0  1.3 1865461168 107040   ??  S    12:54PM   0:03.42 /Applications/Go
+ksu              93916   0.0  1.1 1865474336  90464   ??  S    12:54PM   0:00.42 /Applications/Go
+ksu              93913   0.0  1.1 1867179904  92512   ??  S    12:54PM   0:01.83 /Applications/Go
+ksu              93912   0.0  1.4 1865519120 114992   ??  S    12:54PM   0:26.96 /Applications/Go
+ksu              93896   0.0  1.5 1867231680 127952   ??  S    12:53PM   0:14.12 /Applications/Go
+ksu              93338   0.0  0.2 410858800  14528   ??  Ss   12:26PM   0:00.21 /System/Library/
+ksu              93064   0.0  0.2 426916400  14624   ??  Ss   12:14PM   0:00.23 /System/Library/
+ksu              93025   0.0  0.2 410989376  15040   ??  Ss   12:13PM   0:00.26 /System/Library/
+ksu              93011   0.0  0.2 426916368  14656   ??  Ss   12:12PM   0:00.23 /System/Library/
+root             92847   0.0  0.0 426916352   1520   ??  Ss   11:08AM   0:02.41 /usr/libexec/sys
+ksu              92653   0.0  0.2 411794880  19040   ??  S     9:20AM   0:00.44 /System/Library/
+ksu              92588   0.0  0.0 426916816   3936   ??  S     9:02AM   0:02.26 /System/Library/
+ksu              92470   0.0  0.1 426964992   7024   ??  S     8:16AM   0:00.30 /System/Library/
+ksu              92448   0.0  0.1 426950944   6416   ??  S     8:00AM   0:00.73 /System/Library/
+ksu              91387   0.0  0.4 427155792  31200   ??  Ss    6:54PM   0:04.65 /System/Applicat
+ksu              91002   0.0  0.1 426952256   9392   ??  S     3:48PM   0:00.42 /System/Library/
+ksu              90809   0.0  0.2 426966496  13632   ??  S     3:20PM   0:00.98 /System/Library/
+ksu              90744   0.0  0.2 426971584  16784   ??  S     3:05PM   0:07.24 /usr/libexec/rou
+root             90738   0.0  0.3 426966048  23168   ??  Ss    3:04PM   1:55.79 /usr/libexec/Per
+ksu              90735   0.0  0.1 426966832  12288   ??  S     3:04PM   0:03.42 /System/Library/
+root             90700   0.0  0.0 426950384   3552   ??  Ss    3:04PM   0:01.22 /usr/libexec/sec
+ksu              90681   0.0  0.1 426967296  10416   ??  S     3:03PM   0:02.32 /System/Library/
+ksu              90680   0.0  0.1 426962240  10368   ??  S     3:03PM   0:00.61 /System/Library/
+ksu              90670   0.0  0.1 426963424  12528   ??  S     3:03PM   0:00.62 /usr/libexec/nea
+ksu              90646   0.0  0.2 426963232  14736   ??  S     3:03PM   0:01.08 /usr/libexec/pro
+root             89176   0.0  0.1 426951616   7088   ??  Ss   Thu02PM   0:07.03 /usr/libexec/aud
+ksu              88847   0.0  0.1 426970048   9792   ??  S    Thu10AM   0:05.31 /System/Library/
+ksu              88464   0.0  0.1 426952096   8976   ??  S    Thu06AM   0:18.87 /usr/libexec/tri
+ksu              87605   0.0  0.3 411741072  25920   ??  Ss   Wed11PM   0:03.16 /System/Library/
+ksu              87413   0.0  0.2 426970064  14928   ??  S    Wed11PM   0:07.87 /System/Library/
+ksu              87368   0.0  0.3 411136352  21360   ??  Ss   Wed11PM   0:03.94 /System/Library/
+ksu              87271   0.0  0.6 1865450336  51472   ??  S    Wed11PM   0:01.17 /Applications/Go
+ksu              87269   0.0  0.7 1865463824  56320   ??  S    Wed11PM   0:29.48 /Applications/Go
+ksu              86871   0.0  0.4 411215184  30928   ??  Ss   Wed11PM   0:11.14 /System/Library/
+ksu              86867   0.0  0.3 412079472  29072   ??  S    Wed11PM   0:29.26 /System/Applicat
+ksu              85554   0.0  0.2 426964624  13440   ??  Ss   Wed07PM   0:00.13 /System/Applicat
+ksu              85553   0.0  0.2 426964880  13264   ??  Ss   Wed07PM   0:00.14 /System/Applicat
+ksu              85524   0.0  0.2 427009024  12784   ??  Ss   Wed07PM   0:00.28 /System/Applicat
+ksu              84445   0.0  0.2 426968448  18320   ??  S    Wed07PM   1:19.26 /System/Library/
+root             84424   0.0  0.1 426960864   7152   ??  Ss   Wed07PM   0:03.24 /usr/libexec/neh
+ksu              84423   0.0  0.2 426975152  14240   ??  S    Wed07PM   0:13.29 /usr/libexec/net
+_biome           84420   0.0  0.1 426950768   9904   ??  Ss   Wed07PM   0:02.92 /System/Library/
+root             84408   0.0  0.1 426951520   4960   ??  Ss   Wed07PM   0:06.95 /usr/libexec/ane
+ksu              84110   0.0  0.5 411746416  43600   ??  S    Wed07PM   1:13.72 /System/Applicat
+ksu              80426   0.0  0.3 411188832  23184   ??  Ss   Wed05PM   0:09.30 /System/Library/
+ksu              76436   0.0  0.2 426971872  12704   ??  Ss   Wed04PM   0:06.12 /System/Library/
+ksu              76414   0.0  0.2 411384640  13888   ??  S    Wed04PM   0:13.29 /System/Library/
+root             76388   0.0  0.1 426968544  10544   ??  Ss   Wed04PM   0:15.70 /usr/libexec/cor
+ksu              69494   0.0  0.1 411553456  12352   ??  Ss   Wed02PM   0:03.14 /System/Library/
+ksu              69432   0.0  0.1 426957008   8784   ??  S    Wed02PM   0:03.30 /System/Library/
+ksu              66963   0.0  0.2 426981680  17184   ??  S    Tue03PM   0:08.88 /System/Library/
+ksu              66048   0.0  0.2 426967360  12784   ??  S    Tue03PM   0:04.79 /System/Library/
+ksu              63862   0.0  0.1 444737184   9360   ??  S    Tue01PM   0:04.63 /Applications/Mi
+ksu              63861   0.0  0.1 444739760  10224   ??  S    Tue01PM   0:05.37 /Applications/Mi
+ksu              63850   0.0  0.8 1871279008  65120   ??  S    Tue01PM   3:47.81 /Applications/Mi
+ksu              63847   0.0  0.1 444689744   8400   ??  S    Tue01PM   0:02.40 /Applications/Mi
+ksu              63846   0.0  0.2 444748336  14496   ??  S    Tue01PM   0:25.81 /Applications/Mi
+ksu              63845   0.0  0.2 444910208  12592   ??  S    Tue01PM   1:01.54 /Applications/Mi
+ksu              63842   0.0  0.0 444150336    928   ??  S    Tue01PM   0:00.00 /Applications/Mi
+ksu              63840   0.0  0.0 444162176   1328   ??  S    Tue01PM   0:00.16 /Applications/Mi
+ksu              63836   0.0  0.7 478733360  55024   ??  S    Tue01PM   0:55.95 /Applications/Mi
+ksu              63828   0.0  0.1 411383136   9248   ??  Ss   Tue01PM   0:01.41 /Applications/Mi
+ksu              63826   0.0  0.0 410884896   1152   ??  S    Tue01PM   0:00.02 /Applications/Mi
+ksu              63822   0.0  0.5 445304752  40848   ??  S    Tue01PM  82:12.42 /Applications/Mi
+ksu              58474   0.0  0.2 1866826912  15904   ??  S    Mon03PM   2:32.92 /private/var/fol
+ksu              58262   0.0  0.2 1866855216  15296   ??  S    Mon03PM   0:17.06 /private/var/fol
+ksu              58241   0.0  0.2 444018704  13680   ??  S    Mon03PM   0:13.17 /private/var/fol
+ksu              58240   0.0  0.2 444117968  19632   ??  S    Mon03PM   2:28.80 /private/var/fol
+ksu              58239   0.0  0.0 443693008   1344   ??  S    Mon03PM   0:00.18 /var/folders/qw/
+ksu              58230   0.0  0.4 1867595888  36480   ??  S    Mon03PM   6:11.92 /private/var/fol
+ksu              58193   0.0  0.3 1865465328  23680   ??  S    Mon02PM   0:20.72 /Applications/Go
+ksu              58191   0.0  0.5 1865478896  41856   ??  S    Mon02PM   0:06.31 /Applications/Go
+ksu              57590   0.0  1.2 1865664960 101312   ??  S    Mon02PM   8:50.65 /Applications/Go
+root             54386   0.0  0.0 426916896   2208   ??  Ss   Sun08PM   0:00.07 /System/Library/
+ksu              53186   0.0  0.7 1865691648  62720   ??  S    Sun07PM   1:01.97 /Applications/Go
+ksu              51974   0.0  0.1 426969776  12352   ??  S    Sun05PM   0:04.73 /System/Library/
+ksu              51608   0.0  0.1 426956192   8256   ??  S    Sun05PM   0:16.59 /System/Library/
+root             41644   0.0  0.0 426960832   3088   ??  Ss   Sat02PM   0:00.43 /System/Library/
+ksu              40968   0.0  0.2 444212128  13568   ??  S    Sat02PM   0:13.77 /Applications/Go
+ksu              40967   0.0  0.2 444343680  15280   ??  S    Sat02PM   0:50.50 /Applications/Go
+ksu              40911   0.0  0.7 1865680528  56064   ??  S    Sat02PM   2:00.70 /Applications/Go
+ksu              37031   0.0  0.1 411087904  12528   ??  Ss   Fri09PM   0:05.64 /System/Library/
+ksu              37005   0.0  0.2 411147184  14496   ??  Ss   Fri09PM   0:05.43 /System/Library/
+ksu              37003   0.0  0.1 411078704  11104   ??  Ss   Fri09PM   0:04.44 /System/Library/
+ksu              37002   0.0  0.2 411114736  13104   ??  Ss   Fri09PM   0:18.26 /System/Library/
+ksu              36994   0.0  0.2 411091600  15040   ??  Ss   Fri09PM   0:14.24 /System/Library/
+ksu              36992   0.0  0.2 411100064  14128   ??  Ss   Fri09PM   0:05.28 /System/Library/
+ksu              36985   0.0  0.2 427247168  18096   ??  Ss   Fri09PM   0:09.41 /System/iOSSuppo
+ksu              36961   0.0  0.2 411150640  18336   ??  Ss   Fri09PM   0:16.57 /System/Library/
+ksu              36951   0.0  0.1 411079312  11840   ??  Ss   Fri09PM   0:08.66 /System/Library/
+ksu              36934   0.0  0.2 427249872  18384   ??  Ss   Fri09PM   0:11.02 /System/iOSSuppo
+ksu              36933   0.0  0.2 411141328  15664   ??  Ss   Fri09PM   0:19.19 /System/Library/
+ksu              36446   0.0  0.2 444208592  15792   ??  S    Fri08PM   0:12.97 /Applications/Go
+ksu              36445   0.0  0.7 444363888  56656   ??  S    Fri08PM   6:04.05 /Applications/Go
+ksu              36439   0.0  0.0 443694848   1184   ??  S    Fri08PM   0:00.28 /Applications/Go
+root             35997   0.0  0.1 426952720   5152   ??  Ss   Fri08PM   0:25.47 /System/Library/
+ksu              35940   0.0  0.1 426963696  10128   ??  S    Fri08PM   4:15.03 /System/Library/
+ksu              35067   0.0  0.2 426992800  12688   ??  Ss   Fri08PM   0:08.16 /System/Library/
+ksu              35047   0.0  0.2 411086912  13936   ??  Ss   Fri08PM   0:27.93 /System/Library/
+ksu              35034   0.0  0.8 411181136  64736   ??  Ss   Fri08PM  34:07.98 /System/Library/
+ksu              34941   0.0  0.2 411137808  18544   ??  Ss   Fri08PM  21:30.86 /System/Library/
+ksu              34828   0.0  0.2 411137600  16080   ??  Ss   Fri08PM   0:18.26 /System/Library/
+ksu              34820   0.0  0.1 410868176  10048   ??  Ss   Fri08PM   0:03.52 /System/Library/
+ksu              34819   0.0  0.2 411034464  13312   ??  Ss   Fri08PM   0:04.35 /System/Library/
+ksu              34818   0.0  0.2 411062112  13664   ??  Ss   Fri08PM   0:58.85 /System/Library/
+ksu              34816   0.0  0.1 410874176  12480   ??  Ss   Fri08PM   0:06.84 /System/Library/
+ksu              34815   0.0  0.1 410866560   9600   ??  Ss   Fri08PM   0:03.38 /System/Library/
+ksu              34810   0.0  0.1 411074768  11792   ??  Ss   Fri08PM   0:06.96 /System/Applicat
+ksu              34809   0.0  0.2 411135840  16416   ??  Ss   Fri08PM   0:16.86 /System/Library/
+ksu              34807   0.0  0.3 411174688  22304   ??  S    Fri08PM   6:45.71 /System/Applicat
+ksu              34071   0.0  0.1 427138512  11648   ??  S    Fri07PM   0:10.56 /System/Library/
+ksu              33405   0.0  0.1 411254864  11664   ??  S    Fri06PM   0:08.67 /System/Library/
+ksu              33404   0.0  0.0 410472560   3728   ??  Ss   Fri06PM   0:00.06 /System/Library/
+root             32522   0.0  0.0 411740816   2448   ??  Ss   Fri05PM   0:00.35 /Library/Privile
+root             31808   0.0  0.0 426951536   2960   ??  Ss   Fri04PM   0:00.19 /usr/libexec/kcp
+ksu              30461   0.0  0.1 427005856  10608   ??  S    Fri04PM   0:19.67 /usr/libexec/stu
+root             30128   0.0  0.0 411216672   2544   ??  Ss   Fri03PM   0:00.53 /Library/Privile
+ksu              30114   0.0  0.1 426982864  11792   ??  S    Fri03PM   2:30.91 /usr/libexec/sea
+ksu              30059   0.0  0.1 411328336   4832   ??  Ss   Fri03PM   0:01.97 /System/Library/
+ksu              29398   0.0  0.1 426965520  11344   ??  S    Fri03PM   0:28.15 /System/Library/
+root             27418   0.0  0.1 426952960   4960   ??  Ss   Fri03PM   0:00.65 /System/Library/
+ksu              20477   0.0  0.2 426973920  14464   ??  S    26Jun25   0:53.24 /System/Library/
+ksu              20045   0.0  0.2 411187744  18784   ??  Ss   26Jun25   0:21.47 /System/Library/
+ksu              12994   0.0  0.2 426972384  16992   ??  S    26Jun25   2:16.88 /System/Library/
+ksu              41167   0.0  0.2 427199680  17296   ??  S    16Jun25   3:47.18 /System/Library/
+ksu              99825   0.0  0.1 427112240   7408   ??  S    10Jun25   0:07.91 /System/Library/
+root             43561   0.0  0.0 426916720   1296   ??  Ss    2Jun25   0:00.01 /usr/libexec/tas
+_driverkit       42851   0.0  0.0 426851568    128   ??  Ss    2Jun25   0:01.52 /System/Library/
+root             42754   0.0  0.1 427012592  10736   ??  Ss    2Jun25  29:12.90 /usr/sbin/blueto
+ksu              22808   0.0  0.0 426954576   3328   ??  S    29May25   0:16.92 /System/Cryptexe
+ksu              17893   0.0  0.1 411075104   5392   ??  Ss   28May25  16:07.98 /System/Library/
+ksu              17110   0.0  0.1 427002320   5600   ??  Ss   28May25   0:33.16 /System/Library/
+ksu              11206   0.0  0.2 427001936  13888   ??  S    27May25   7:25.10 /System/Library/
+ksu              60704   0.0  0.1 410696624   6032   ??  S    20May25   5:36.65 /usr/libexec/Sid
+ksu              51468   0.0  0.1 426926160   6304   ??  Ss   17May25   0:21.91 /System/Volumes/
+ksu              46100   0.0  0.1 426952544   4704   ??  S    16May25   0:22.12 /usr/libexec/tip
+ksu              35513   0.0  0.0 426917040    544   ??  S    15May25   0:00.26 /System/Library/
+ksu              26473   0.0  0.1 426954896   7008   ??  S    14May25   1:07.06 /System/Library/
+ksu              26467   0.0  0.3 411970784  24752   ??  S    14May25   6:30.17 /System/Applicat
+ksu              25687   0.0  0.0 426917104   1424   ??  S    14May25   0:00.19 /System/Library/
+ksu              23694   0.0  0.1 411377648   7120   ??  S    14May25   1:12.20 /Library/Apple/S
+ksu              23690   0.0  0.0 426951888   3088   ??  S    14May25   0:09.62 /System/Cryptexe
+ksu              23680   0.0  0.1 431507312   6944   ??  Ss   14May25   2:57.44 /System/Library/
+ksu              23668   0.0  0.1 427083744   4448   ??  S    14May25   0:09.77 /System/Cryptexe
+ksu              23667   0.0  0.4 432257904  30080   ??  S    14May25  17:51.03 /System/Volumes/
+root             16921   0.0  0.1 426957456   9296   ??  Ss   13May25   8:27.28 /usr/libexec/wif
+ksu               6568   0.0  0.3 417811648  28368   ??  S    13May25  12:28.50 /Applications/Ou
+ksu               6295   0.0  0.0 426916688    304   ??  S    13May25   0:00.12 /usr/libexec/USB
+ksu               6264   0.0  0.0 410857968   1136   ??  Ss   13May25   0:03.98 /System/Library/
+ksu               6262   0.0  0.0 426970480   3920   ??  S    13May25   0:14.90 /System/Library/
+ksu               4939   0.0  0.1 427124416   5952   ??  S    13May25   0:20.37 /System/Library/
+_neuralengine     4831   0.0  0.0 426916640   1024   ??  S    13May25   0:28.39 /usr/sbin/distno
+ksu               4557   0.0  0.1 427014592   7488   ??  S    13May25   0:57.64 /System/Library/
+ksu               4062   0.0  0.0 426949952    560   ??  S    13May25   0:00.46 /System/Library/
+ksu               4050   0.0  0.0 426950928   4096   ??  S    13May25   0:12.51 /System/Library/
+_audiomxd         3407   0.0  0.0 426916640    992   ??  S    13May25   0:28.82 /usr/sbin/distno
+root              3321   0.0  0.1 426958544   6752   ??  Ss   13May25   2:42.25 /usr/libexec/wif
+root              2590   0.0  0.1 411217776   5168   ??  Ss   12May25   0:51.48 /Applications/Mi
+_coreaudiod       2216   0.0  0.0 410366208   2016   ??  Ss   12May25   1:18.56 Core Audio Drive
+_coreaudiod       2210   0.0  0.1 426995440   8112   ??  Ss   12May25 177:42.76 /usr/sbin/coreau
+ksu               2036   0.0  0.1 411387904   6128   ??  S    12May25   0:22.82 /System/Library/
+ksu               1875   0.0  0.1 426981936  11600   ??  S    12May25   2:48.59 /System/Library/
+ksu               1861   0.0  0.0 410622592   1536   ??  Ss   12May25   0:02.32 /System/Library/
+ksu               1862   0.0  0.0 426974080   3072   ??  S    12May25   0:05.59 /usr/libexec/ptp
+ksu               1823   0.0  0.1 427139888  10032   ??  S    12May25   0:57.77 /System/Library/
+ksu               1785   0.0  0.4 414875344  31872   ??  S    12May25  18:45.71 /Applications/Mi
+ksu               1782   0.0  0.4 411914304  35216   ??  S    12May25   7:06.81 /System/Library/
+ksu               1778   0.0  0.1 410982064   4368   ??  S    12May25   0:17.76 /System/Library/
+_audiomxd         1756   0.0  0.0 426950528   4000   ??  Ss   12May25   0:49.78 /usr/libexec/aud
+ksu               1726   0.0  0.0 426950304   2320   ??  S    12May25   0:03.04 /System/Library/
+root              1699   0.0  0.0 426933312    256   ??  Ss   12May25   0:00.18 /System/Library/
+ksu               1678   0.0  0.1 411051312  11648   ??  Ss   12May25   4:56.77 /System/Library/
+ksu               1677   0.0  0.0 426962352   3056   ??  S    12May25   0:11.71 /System/Library/
+root              1676   0.0  0.0 426917920     80   ??  Ss   12May25   0:01.41 automountd
+ksu               1669   0.0  0.1 411303536   9360   ??  S    12May25   1:16.42 /System/Library/
+ksu               1668   0.0  0.4 412412992  29552   ??  S    12May25   9:17.87 /System/Library/
+ksu               1667   0.0  0.3 427264240  22016   ??  S    12May25   4:14.30 /System/Applicat
+ksu               1665   0.0  0.5 419451296  38976   ??  S    12May25  34:38.61 /Applications/Mi
+ksu               1664   0.0  0.3 412472704  21264   ??  S    12May25   3:22.28 /System/Applicat
+ksu               1662   0.0  0.6 412900496  47056   ??  S    12May25  20:41.72 /System/Applicat
+ksu               1616   0.0  0.0 426916288   1760   ??  S    12May25   0:00.88 /System/Library/
+ksu               1615   0.0  0.1 426979520   6832   ??  Ss   12May25   0:48.26 /System/Library/
+ksu               1613   0.0  0.2 411548000  19536   ??  S    12May25   7:25.26 /System/Library/
+ksu               1612   0.0  0.0 410695824   3456   ??  S    12May25   0:29.12 /System/Library/
+root              1611   0.0  0.0 426916256    912   ??  Ss   12May25   0:01.36 /System/Library/
+ksu               1492   0.0  0.0 410754208    880   ??  S    12May25   0:03.09 /System/Library/
+_trustd           1325   0.0  0.1 426964624   6032   ??  Ss   12May25  18:54.42 /usr/libexec/tru
+ksu               1277   0.0  0.1 426958432   7824   ??  S    12May25  18:48.68 /usr/libexec/tru
+ksu               1211   0.0  0.1 426956624   4400   ??  S    12May25   0:15.05 /System/Library/
+ksu               1210   0.0  0.4 413249264  35744   ??  S    12May25   6:01.45 /System/Library/
+ksu               1209   0.0  0.0 426952816   1744   ??  S    12May25   0:30.87 /System/Library/
+ksu               1159   0.0  0.0 426962192   3632   ??  Ss   12May25   0:00.69 /System/Applicat
+_rmd              1112   0.0  0.0 426916640   1008   ??  S    12May25   0:29.04 /usr/sbin/distno
+root              1104   0.0  0.0 426916144   1504   ??  Ss   12May25   0:00.24 /System/Library/
+ksu                990   0.0  0.1 426951856   5584   ??  S    12May25   0:52.17 /System/Library/
+ksu                844   0.0  0.0 427017008     16   ??  Ss   12May25   0:11.72 /System/Applicat
+_installcoordinationd   788   0.0  0.0 426917168   2560   ??  Ss   12May25   0:01.71 /System/Library/
+ksu                779   0.0  0.0 426949920      0   ??  Ss   12May25   0:00.05 /System/Applicat
+ksu                775   0.0  0.1 431357152   4928   ??  S    12May25   0:42.08 /System/Library/
+_fpsd              759   0.0  0.0 426936560   1584   ??  Ss   12May25   0:14.85 /System/Library/
+ksu                756   0.0  0.0 426952496      0   ??  Ss   12May25   0:00.08 /System/Applicat
+ksu                747   0.0  0.1 426914816   7840   ??  S    12May25   6:49.09 /usr/libexec/avc
+root               746   0.0  0.0 411885360    368   ??  Ss   12May25   0:02.82 /Library/Privile
+ksu                740   0.0  0.0 426912032   1280   ??  S    12May25   0:06.39 /System/Library/
+ksu                739   0.0  0.1 426963344  11088   ??  S    12May25   3:12.93 /System/Library/
+ksu                727   0.0  0.1 411389968   9840   ??  S    12May25   0:47.07 /System/Library/
+ksu                720   0.0  0.1 426973312   5744   ??  S    12May25   0:47.20 /System/Library/
+ksu                708   0.0  0.0 426981552    224   ??  S    12May25   0:02.91 /System/Library/
+ksu                707   0.0  0.1 426960144   8720   ??  S    12May25   6:01.69 /System/Library/
+ksu                706   0.0  0.1 411283776  10368   ??  S    12May25   1:44.04 /System/Library/
+ksu                700   0.0  0.2 426999968  13552   ??  S    12May25  53:29.09 /System/Library/
+ksu                678   0.0  0.1 426955136   4208   ??  S    12May25   2:29.30 /System/Library/
+ksu                645   0.0  0.3 432052880  20976   ??  S    12May25  10:46.71 /System/Library/
+ksu                644   0.0  0.1 426962848   7312   ??  SN   12May25   1:48.58 /System/Library/
+ksu                639   0.0  0.1 426970640   6992   ??  Ss   12May25   0:14.27 /System/Library/
+root               605   0.0  0.1 426961328   5504   ??  Ss   12May25   2:05.03 /usr/sbin/fileco
+ksu                601   0.0  0.1 410497808   7344   ??  S    12May25   1:36.80 /System/Library/
+ksu                600   0.0  0.1 426973232  11584   ??  S    12May25   5:50.92 /System/Library/
+ksu                598   0.0  0.1 426951168   4864   ??  S    12May25   0:03.45 /usr/libexec/ses
+ksu                591   0.0  0.3 411682208  26000   ??  S    12May25  21:49.75 /System/Library/
+ksu                589   0.0  0.1 426964688   9280   ??  S    12May25   2:28.40 /System/Library/
+_appleevents       583   0.0  0.0 426916640    976   ??  S    12May25   0:28.86 /usr/sbin/distno
+_nearbyd           582   0.0  0.1 426961552   6672   ??  Ss   12May25   5:35.11 /usr/libexec/nea
+ksu                569   0.0  0.5 412138240  42208   ??  S    12May25  34:59.18 /System/Library/
+_gamecontrollerd   554   0.0  0.0 426916640    928   ??  S    12May25   0:28.79 /usr/sbin/distno
+ksu                549   0.0  0.4 411833088  30000   ??  S    12May25  35:29.13 /System/Library/
+_appinstalld       545   0.0  0.0 426916640    992   ??  S    12May25   0:29.03 /usr/sbin/distno
+ksu                537   0.0  0.1 426971616   8592   ??  S    12May25   8:41.88 /usr/libexec/Con
+ksu                536   0.0  0.2 426983392  12784   ??  S    12May25   1:47.66 /System/Library/
+ksu                534   0.0  0.1 426951792  11568   ??  S    12May25  11:58.58 /System/Library/
+ksu                491   0.0  0.1 427113776  11728   ??  S    12May25  18:17.42 /System/Library/
+ksu                527   0.0  0.1 426959184  10864   ??  S    12May25   2:11.60 /System/Library/
+ksu                523   0.0  0.1 426963280   5408   ??  S    12May25   0:44.12 /System/Library/
+ksu                516   0.0  0.1 426962144  12320   ??  S    12May25   1:14.31 /System/Library/
+root               507   0.0  0.0 426951440   1776   ??  Ss   12May25   0:07.17 /System/Library/
+ksu                505   0.0  0.2 427020512  13744   ??  S    12May25  14:10.10 /usr/libexec/sha
+ksu                503   0.0  0.1 426951472   5696   ??  S    12May25   0:31.50 /System/Library/
+ksu                488   0.0  0.2 426988464  14192   ??  S    12May25   6:49.73 /System/Library/
+ksu                475   0.0  0.0 426912208      0   ??  S    12May25   0:00.03 /System/Library/
+ksu                473   0.0  0.0 426951184   2512   ??  S    12May25   2:55.05 /System/Library/
+ksu                468   0.0  0.2 426965424  13328   ??  S    12May25   3:03.66 /usr/sbin/userno
+ksu                467   0.0  0.1 426958912   9392   ??  S    12May25   4:31.33 /usr/libexec/rap
+ksu                466   0.0  0.1 427036528  12528   ??  S    12May25  22:49.73 /usr/libexec/nsu
+ksu                461   0.0  0.0 426949312   2080   ??  S    12May25   2:04.12 /usr/libexec/con
+ksu                460   0.0  0.1 426976192  10624   ??  S    12May25   3:00.05 /usr/libexec/lsd
+ksu                458   0.0  0.1 426929296   6096   ??  S    12May25   0:31.46 /usr/libexec/pbo
+ksu                450   0.0  0.0 426952608   3344   ??  S    12May25  13:44.91 /usr/libexec/Use
+ksu                455   0.0  0.1 410976992   4304   ??  S    12May25   1:30.81 /usr/sbin/univer
+_ctkd              444   0.0  0.0 426950080   2736   ??  Ss   12May25   0:00.83 /System/Library/
+ksu                440   0.0  0.1 427001360  10352   ??  S    12May25  11:17.18 /usr/libexec/sec
+ksu                431   0.0  0.1 426916640   5216   ??  S    12May25  10:15.85 /usr/sbin/distno
+root               429   0.0  0.1 426950896   5520   ??  Ss   12May25   0:10.25 /System/Library/
+root               396   0.0  0.1 426957104   5616   ??  Ss   12May25   0:33.17 /System/Library/
+_oahd              411   0.0  0.0 426912912    432   ??  Ss   12May25   0:01.86 /usr/libexec/ros
+_applepay          393   0.0  0.0 426916640    944   ??  S    12May25   0:28.72 /usr/sbin/distno
+root               385   0.0  0.1 426963040  10848   ??  Ss   12May25   6:37.82 /usr/libexec/gam
+_spotlight         382   0.0  0.0 426916640    992   ??  S    12May25   0:28.96 /usr/sbin/distno
+_nsurlsessiond     380   0.0  0.0 426916640    992   ??  S    12May25   0:28.90 /usr/sbin/distno
+_locationd         372   0.0  0.0 426916640   1008   ??  S    12May25   0:29.31 /usr/sbin/distno
+_appleevents       328   0.0  0.0 426950720   2368   ??  Ss   12May25   0:24.29 /System/Library/
+_locationd         320   0.0  0.2 426981744  19488   ??  Ss   12May25  55:58.20 /usr/libexec/loc
+_softwareupdate    317   0.0  0.0 426916640    992   ??  S    12May25   0:29.47 /usr/sbin/distno
+_accessoryupdater   309   0.0  0.0 426916640    960   ??  S    12May25   0:30.38 /usr/sbin/distno
+root               304   0.0  0.0 426951920   1344   ??  S    12May25   0:28.27 /usr/sbin/system
+root               293   0.0  0.1 426955552   4512   ??  Ss   12May25   0:52.96 /usr/libexec/wif
+root               282   0.0  0.0 410791648   3952   ??  Ss   12May25  19:31.09 /usr/libexec/aud
+_cmiodalassistants   281   0.0  0.0 426950688   2480   ??  Ss   12May25   0:09.27 /System/Library/
+_cmiodalassistants   280   0.0  0.0 426949696   2480   ??  Ss   12May25   0:01.26 /usr/libexec/cam
+_cmiodalassistants   279   0.0  0.0 426956048   3728   ??  Ss   12May25  42:23.95 /usr/sbin/appleh
+root               278   0.0  0.1 426990608  11664   ??  Ss   12May25   9:25.81 /usr/libexec/sea
+root               262   0.0  0.0 426949920   1632   ??  Ss   12May25   0:00.72 /usr/libexec/App
+root               260   0.0  0.0 426950032   1904   ??  Ss   12May25   1:33.85 /usr/libexec/apf
+_nsurlsessiond     257   0.0  0.1 427019568   8368   ??  Ss   12May25   2:34.98 /usr/libexec/nsu
+_modelmanagerd     256   0.0  0.0 426981920   3936   ??  Ss   12May25   0:36.41 /usr/libexec/mod
+_cmiodalassistants   252   0.0  0.0 426916640   1024   ??  S    12May25   0:30.19 /usr/sbin/distno
+_driverkit         249   0.0  0.0 426851696    576   ??  Ss   12May25   0:07.29 /System/Library/
+_driverkit         248   0.0  0.4 426907056  32336   ??  Ss   12May25 149:09.37 /System/Library/
+_driverkit         247   0.0  0.0 426851488     64   ??  Ss   12May25   0:02.59 /System/Library/
+root               245   0.0  0.0 426964256   3680   ??  Ss   12May25   0:04.13 /System/Library/
+root               239   0.0  0.1 426952624   6480   ??  Ss   12May25   7:28.30 /usr/sbin/Wirele
+root             96200   0.0  0.0 410724288   1856 s021  R+    2:54PM   0:00.01 ps aux
+_coreaudiod        230   0.0  0.0 426916640    960   ??  S    12May25   0:31.16 /usr/sbin/distno
+root               226   0.0  0.0 426950800   1008   ??  Ss   12May25   0:34.86 /usr/sbin/mDNSRe
+root               225   0.0  0.1 426969440   6656   ??  Ss   12May25   5:53.34 /usr/libexec/sys
+_networkd          209   0.0  0.1 426966720  11552   ??  Ss   12May25  14:27.41 /usr/libexec/sym
+_mdnsresponder     203   0.0  0.1 426967216   7328   ??  Ss   12May25  19:23.60 /usr/sbin/mDNSRe
+root               191   0.0  0.0 426916640   1136   ??  S    12May25   0:33.89 /usr/sbin/distno
+_windowserver      195   0.0  0.0 426916640    992   ??  S    12May25   0:31.53 /usr/sbin/distno
+root               189   0.0  0.1 426955472   4672   ??  Ss   12May25   0:23.93 /usr/libexec/eli
+root               190   0.0  0.0 426951728   2864   ??  Ss   12May25   1:30.54 /System/Library/
+root               186   0.0  0.1 426961744   7008   ??  Ss   12May25   3:53.34 /usr/libexec/lsd
+root               181   0.0  0.3 426959872  21136   ??  Ss   12May25 250:52.14 /usr/libexec/air
+_timed             142   0.0  0.0 426950544   2528   ??  Ss   12May25   2:20.25 /usr/libexec/tim
+_distnote          152   0.0  0.0 426916640   2240   ??  Ss   12May25   4:11.90 /usr/sbin/distno
+_usbmuxd           143   0.0  0.0 426960800   2336   ??  Ss   12May25   0:17.40 /System/Library/
+root               175   0.0  0.1 426962944   9984   ??  Ss   12May25  11:50.92 /System/Library/
+root               176   0.0  0.0 426968608   1616   ??  Ss   12May25   0:54.66 /System/Library/
+_corespeechd       121   0.0  0.0 410654480      0   ??  Ss   12May25   0:00.03 /System/Library/
+ksu                172   0.0  0.2 411888448  17776   ??  Ss   12May25  21:40.63 /System/Library/
+root               171   0.0  0.0 426916928   3568   ??  Ss   12May25  14:23.12 /usr/sbin/cfpref
+root               170   0.0  0.1 426962944   6672   ??  Ss   12May25   5:57.69 /System/Library/
+root               113   0.0  0.0 426912656    224   ??  Ss   12May25   0:00.12 /usr/libexec/IOM
+root               105   0.0  0.1 426967296   7776   ??  Ss   12May25   3:17.62 /System/Library/
+root               150   0.0  0.1 426957952   9424   ??  Ss   12May25  62:00.45 /usr/libexec/das
+root               107   0.0  0.1 426961808   6448   ??  Ss   12May25   2:31.83 /usr/sbin/system
+root               141   0.0  0.1 426959008   7680   ??  Ss   12May25  13:17.63 /System/Library/
+root               166   0.0  0.1 426977744   4208   ??  Ss   12May25   0:55.02 /System/Library/
+root               157   0.0  0.0 426951472   3680   ??  Ss   12May25   0:03.35 /System/Library/
+root               134   0.0  0.0 426917344    384   ??  Ss   12May25   2:45.01 /usr/sbin/syslog
+root               158   0.0  0.0 426916704    160   ??  Ss   12May25   0:00.79 /usr/sbin/Kernel
+root               117   0.0  0.0 426951056   1104   ??  Ss+  12May25   0:09.44 /usr/libexec/rem
+root               123   0.0  0.0 426916784    704   ??  Ss   12May25   0:27.52 /usr/libexec/wat
+root               149   0.0  0.0 426912592    112   ??  Ss   12May25   0:01.19 autofsd
+root               144   0.0  0.0 426958160   3008   ??  Ss   12May25   3:12.27 /usr/sbin/securi
+root               140   0.0  0.1 426965136   6240   ??  Ss   12May25  20:17.54 /System/Library/
+root               137   0.0  0.0 426950496   2256   ??  Ss   12May25   8:36.11 /usr/libexec/the
+root               126   0.0  0.0 426916928   1424   ??  SNs  12May25   0:12.50 /usr/libexec/war
+root               130   0.0  0.0 426950320   3296   ??  Ss   12May25   2:31.38 /usr/libexec/dis
+root               165   0.0  0.0 426951232   4160   ??  Ss   12May25   2:28.62 /usr/libexec/Air
+root               112   0.0  0.1 426952224   7408   ??  Ss   12May25  16:50.56 /System/Library/
+root               102   0.0  0.1 426958912   6800   ??  Ss   12May25   5:03.30 /usr/libexec/Use
+root               156   0.0  0.0 426916208   2400   ??  Ss   12May25   0:07.98 /System/Library/
+root               129   0.0  0.0 426954080   1424   ??  Ss   12May25   0:01.95 /usr/libexec/ker
+_analyticsd        196   0.0  0.1 426966352   8928   ??  Ss   12May25  72:15.38 /System/Library/
+ksu              96190   0.0  0.1 426954672   8448   ??  S     2:54PM   0:00.12 /usr/libexec/key
+ksu              96163   0.0  0.3 426970064  26272   ??  R     2:52PM   0:00.42 /System/Library/
+ksu              96161   0.0  0.2 426968912  14688   ??  S     2:52PM   0:00.12 /System/Library/
+ksu              96159   0.0  0.0 426950160   4064   ??  S     2:52PM   0:00.12 /System/Library/
+root             96144   0.0  0.0 410294480   2432   ??  Ss    2:51PM   0:00.06 /System/Library/
+root             96143   0.0  0.0 426916736   3312   ??  Ss    2:51PM   0:00.08 /System/Library/
+root             96142   0.0  0.1 426964016   7136   ??  Ss    2:51PM   0:00.08 /usr/sbin/system
+ksu              96118   0.0  0.2 411060672  13472   ??  Ss    2:50PM   0:00.29 /System/Library/
+ksu              96117   0.0  0.1 426938688  10896   ??  S     2:50PM   0:00.34 /usr/libexec/lin
+ksu              96102   0.0  0.0 426950000   2784   ??  S     2:49PM   0:00.04 /System/Library/
+ksu              96067   0.0  0.1 410673968   5088   ??  Ss    2:47PM   0:00.06 /System/Library/
+root             96043   0.0  0.0 426949472   4144   ??  Ss    2:46PM   0:00.10 /System/Library/
+ksu              96042   0.0  0.1 411050256   5936   ??  Ss    2:46PM   0:00.17 /System/Library/
+_fpsd            96040   0.0  0.0 426919920   3392   ??  Ss    2:45PM   0:00.09 /System/Library/
+ksu              96039   0.0  0.2 426957232  14192   ??  S     2:45PM   0:00.22 /usr/libexec/fin
+ksu              96038   0.0  0.1 426928080  10416   ??  S     2:45PM   0:00.07 /usr/libexec/pkd
+ksu              96036   0.0  0.1 426961456  10848   ??  S     2:45PM   0:00.09 /System/Library/
+ksu              96037   0.0  0.3 426968784  22192   ??  S     2:45PM   0:00.45 /System/Library/
+root             96019   0.0  0.1 426950384   5712   ??  Ss    2:45PM   0:00.25 /usr/libexec/fin
+root             96010   0.0  0.0 426916672   1904   ??  Ss    2:44PM   0:00.06 /System/Library/
+ksu              96009   0.0  0.2 426966656  19328   ??  S     2:44PM   0:02.77 /System/Library/
+ksu              96006   0.0  0.1 426928160  10256   ??  S     2:44PM   0:00.13 /System/Library/
+ksu@MacBook-Air-Borisova ~ % kill 666 
+kill: kill 666 failed: no such process
+ksu@MacBook-Air-Borisova ~ % ping rusau.net 
+PING rusau.net (5.181.161.75): 56 data bytes
+64 bytes from 5.181.161.75: icmp_seq=0 ttl=64 time=0.203 ms
+64 bytes from 5.181.161.75: icmp_seq=1 ttl=64 time=0.518 ms
+64 bytes from 5.181.161.75: icmp_seq=2 ttl=64 time=0.637 ms
+ksu@MacBook-Air-Borisova ~ % ping -c 5 rusau.net 
+PING rusau.net (5.181.161.75): 56 data bytes
+64 bytes from 5.181.161.75: icmp_seq=0 ttl=64 time=0.324 ms
+64 bytes from 5.181.161.75: icmp_seq=1 ttl=64 time=0.657 ms
+64 bytes from 5.181.161.75: icmp_seq=2 ttl=64 time=0.650 ms
+64 bytes from 5.181.161.75: icmp_seq=3 ttl=64 time=0.704 ms
+64 bytes from 5.181.161.75: icmp_seq=4 ttl=64 time=0.699 ms
+
+--- rusau.net ping statistics ---
+5 packets transmitted, 5 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 0.324/0.607/0.704/0.143 ms
+ksu@MacBook-Air-Borisova ~ % curl -X 'GET' \
+  'https://petstore.swagger.io/v2/pet/findByStatus?status=available&status=pending&status=sold' \
+  -H 'accept: application/json'
+[{"id":9223372036854023305,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023306,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023307,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023317,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":444555,"category":{"id":4444,"name":"dogs"},"name":"Jack","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023327,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":39303787,"category":{"id":57701508,"name":"minim in"},"name":"Ceron","photoUrls":["Duis","culpa sed dolore non"],"tags":[{"id":31323176,"name":"Bugaga"},{"id":76345224,"name":"enim culpa ea ullamco do"}],"status":"available"},{"id":9223372036854023349,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023350,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023351,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":123456789,"category":{"id":0,"name":"string"},"name":"YES","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023362,"category":{"id":0,"name":"Dog123"},"name":"Tom","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023363,"category":{"id":0,"name":"string"},"name":"dog","photoUrls":["string"],"tags":[{"id":0,"name":"dog1"}],"status":"available"},{"id":9223372036854023365,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023368,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023371,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":635,"category":{"id":819,"name":"Antwon"},"name":"Oswald","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854023373,"name":"doggie","photoUrls":["string"],"tags":[],"status":"available"},{"id":9223372036854023374,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":119,"category":{"id":436,"name":"Isom"},"name":"Dahlia","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854023384,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":628,"category":{"id":674,"name":"Sofia"},"name":"Carol","photoUrls":[],"tags":[],"status":"available"},{"id":575,"category":{"id":734,"name":"Esteban"},"name":"Joel","photoUrls":[],"tags":[],"status":"available"},{"id":691,"category":{"id":623,"name":"Nicholaus"},"name":"Pearline","photoUrls":[],"tags":[],"status":"available"},{"id":292,"category":{"id":532,"name":"Cecil"},"name":"Max","photoUrls":[],"tags":[],"status":"available"},{"id":954,"category":{"id":784,"name":"Deon"},"name":"Joanie","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854023385,"name":"doggie","photoUrls":["string"],"tags":[],"status":"available"},{"id":694,"category":{"id":194,"name":"Judson"},"name":"Johanna","photoUrls":[],"tags":[],"status":"available"},{"id":958,"category":{"id":64,"name":"Rory"},"name":"Jocelyn","photoUrls":[],"tags":[],"status":"available"},{"id":981,"category":{"id":646,"name":"Una"},"name":"Robert","photoUrls":[],"tags":[],"status":"available"},{"id":492,"category":{"id":958,"name":"Jensen"},"name":"Yasmine","photoUrls":[],"tags":[],"status":"available"},{"id":805,"category":{"id":209,"name":"Jerod"},"name":"Christina","photoUrls":[],"tags":[],"status":"available"},{"id":255,"category":{"id":599,"name":"Ida"},"name":"Frederik","photoUrls":[],"tags":[],"status":"available"},{"id":231,"category":{"id":951,"name":"Clement"},"name":"Sid","photoUrls":[],"tags":[],"status":"available"},{"id":940,"category":{"id":521,"name":"Karl"},"name":"Buford","photoUrls":[],"tags":[],"status":"available"},{"id":504,"category":{"id":951,"name":"Wendell"},"name":"Jaleel","photoUrls":[],"tags":[],"status":"available"},{"id":444,"category":{"id":936,"name":"Orland"},"name":"Madelynn","photoUrls":[],"tags":[],"status":"available"},{"id":727,"category":{"id":614,"name":"Robbie"},"name":"Keith","photoUrls":[],"tags":[],"status":"available"},{"id":9222968140491042131,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":723,"category":{"id":76,"name":"Hettie"},"name":"Catherine","photoUrls":[],"tags":[],"status":"available"},{"id":14,"category":{"id":309,"name":"Mike"},"name":"Garnett","photoUrls":[],"tags":[],"status":"available"},{"id":299,"category":{"id":31,"name":"Lilly"},"name":"Jan","photoUrls":[],"tags":[],"status":"available"},{"id":733,"category":{"id":269,"name":"Clark"},"name":"Waino","photoUrls":[],"tags":[],"status":"available"},{"id":555,"category":{"id":1,"name":"<String>"},"name":"doggie","photoUrls":["{}"],"tags":[{"id":1,"name":"<String>"}],"status":"available"},{"id":837,"category":{"id":676,"name":"Johan"},"name":"Reba","photoUrls":[],"tags":[],"status":"available"},{"id":845,"category":{"id":687,"name":"Caitlyn"},"name":"Brian","photoUrls":[],"tags":[],"status":"available"},{"id":33,"category":{"id":261,"name":"Deja"},"name":"Dee","photoUrls":[],"tags":[],"status":"available"},{"id":548234,"category":{"id":3,"name":"Rabbits"},"name":"Miki","photoUrls":["https://example.com/photos/miki_1.jpg","https://example.com/photos/miki_2.jpg"],"tags":[{"id":2,"name":"tag_72"}],"status":"available"},{"id":9018568855,"name":"NonExistentPet","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854023408,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":7873964,"category":{"id":834,"name":"Margie"},"name":"Carmella","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854023416,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023417,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023418,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023419,"name":"doggie","photoUrls":["string"],"tags":[],"status":"available"},{"id":100199,"category":{"id":0,"name":"huklya"},"name":"kuklya","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023427,"category":{"id":0,"name":"puppy"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"Charlie"}],"status":"available"},{"id":9223372036854023436,"category":{"id":0,"name":"string"},"name":"test","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023437,"category":{"id":0,"name":"string"},"name":"test","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023438,"category":{"id":0,"name":"string"},"name":"test","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023439,"category":{"id":0,"name":"string"},"name":"test","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":34,"category":{"id":1,"name":"cat"},"name":"Piggy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023447,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":123123,"name":"123123","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854023451,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023452,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023470,"category":{"id":0,"name":"cat"},"name":"Tommy123","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023472,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":1751615905,"category":{"id":1751615892,"name":"testowa kategoria"},"name":"Mateusz Sienkiewicz","photoUrls":["link\r\nlink2"],"tags":[{"id":1751615892,"name":"test"}],"status":"available"},{"id":10099,"category":{"id":1,"name":"cats"},"name":"cutie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":589642,"category":{"id":8,"name":"Dogs"},"name":"Bomboncic","photoUrls":["https://example.com/photos/bomboncic_1.jpg","https://example.com/photos/bomboncic_2.jpg"],"tags":[{"id":4,"name":"tag_74"}],"status":"available"},{"id":9223372036854023479,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023480,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023501,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"doggie"}],"status":"available"},{"id":9223372036854023511,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":522258,"category":{"id":5,"name":"Rabbits"},"name":"Bomboncic","photoUrls":["https://example.com/photos/bomboncic_1.jpg","https://example.com/photos/bomboncic_2.jpg"],"tags":[{"id":17,"name":"tag_28"}],"status":"available"},{"id":4420825,"category":{"id":658,"name":"Mortimer"},"name":"Danyka","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854023516,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023520,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854023521,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":12124657,"category":{"id":12124657,"name":"string"},"name":"Зубоскал","photoUrls":["string"],"tags":[{"id":12124657,"name":"string"}],"status":"available"},{"id":9223372036854023523,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":28756,"category":{"id":28756,"name":"Horse"},"name":"Unicorn","photoUrls":["String"],"tags":[{"id":28756,"name":"Unicorn"}],"status":"available"},{"id":1241846,"category":{"id":865,"name":"Sherman"},"name":"Jevon","photoUrls":[],"tags":[],"status":"available"},{"id":8071499,"category":{"id":593,"name":"Lilla"},"name":"Ana","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854023551,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":720,"category":{"id":804,"name":"Jacky"},"name":"Camilla","photoUrls":["link"],"tags":[{"id":1751617143,"name":"test2"}],"status":"available"},{"id":6898908,"category":{"id":370,"name":"Luna"},"name":"Orville","photoUrls":[],"tags":[],"status":"available"},{"id":9379728,"category":{"id":65,"name":"Marquise"},"name":"Carlie","photoUrls":[],"tags":[],"status":"available"},{"id":6262323,"category":{"id":254,"name":"Braulio"},"name":"Susie","photoUrls":[],"tags":[],"status":"available"},{"id":555777,"category":{"id":4444,"name":"Dogs"},"name":"Jack","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":157891,"category":{"id":2,"name":"Cat"},"name":"Felixxxx","photoUrls":["string"],"tags":[{"id":1,"name":"lopux"}],"status":"available"},{"id":77777,"category":{"id":5,"name":"Dogs"},"name":"Jack","photoUrls":["string"],"tags":[{"id":5,"name":"dog"}],"status":"available"},{"id":64424,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":15288,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":23476,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":78730,"category":{"id":1,"name":"Cat"},"name":"Snowwhite","photoUrls":[""],"tags":[{"id":101,"name":"Snowwhite"}],"status":"available"},{"id":78732,"category":{"id":3,"name":"Snake"},"name":"Orochimaru","photoUrls":[""],"tags":[{"id":303,"name":"Orochimaru"}],"status":"available"},{"id":35801,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":72983,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":44,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":65501,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":6361,"category":{"id":0,"name":"string"},"name":"doggie-oZl","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":98586,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":9711,"category":{"id":0,"name":"string"},"name":"doggie-XrR","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":61250,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":99,"category":{"id":9,"name":"vad��szkutya"},"name":"Frakk","photoUrls":["https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],"tags":[{"id":5,"name":"animációs karakter"}],"status":"available"},{"id":1859,"category":{"id":0,"name":"string"},"name":"doggie-gku","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":50800105,"category":{"id":-3382005,"name":"veniam"},"name":"doggie","photoUrls":["eu cillum","culpa adipisicing proident veniam"],"tags":[{"id":-13038983,"name":"aute do in Excepteur Ut"},{"id":86652366,"name":"ad"}],"status":"available"},{"id":9223372036854023559,"category":{"id":1,"name":"Dogs"},"name":"jack","photoUrls":["https://example.com/jack.jpg"],"tags":[{"id":2,"name":"Energetic"}],"status":"available"},{"id":9223372036854023571,"category":{"id":0,"name":"Pomeranian"},"name":"Yeontn","photoUrls":["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwikibio.in%2Fyeontan%2F&psig=AOvVaw0UdJeOGlk-jKSOtT-nplW1&ust=1682581409377000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCMCQvJiuyP4CFQAAAAAdAAAAABAI"],"tags":[{"id":0,"name":"Dog"}],"status":"available"},{"id":9223372036854023574,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":999999999999999992,"category":{"id":711,"name":"dog"},"name":"Ryleigh","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854752914,"category":{"id":1,"name":"Dogs"},"name":"jack","photoUrls":["https://example.com/jack.jpg"],"tags":[],"status":"available"},{"id":9223372036854752916,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752917,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752918,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":630170777,"category":{"id":1132131,"name":"test_category"},"name":"test_pet_for_api_tool","photoUrls":["http://example.com/photo.jpg"],"tags":[{"id":0,"name":"test_tag"}],"status":"available"},{"id":9223372036854752920,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":3378,"category":{"id":0,"name":"string"},"name":"doggie-bvK","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9222968140497180179,"category":{"id":0,"name":"string"},"name":"test","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752947,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752950,"category":{"id":0,"name":"string"},"name":"hedgehog_updated","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752952,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752970,"name":"doggie","photoUrls":["https://example.com/photo.jpg"],"tags":[],"status":"available"},{"id":9223372036854752972,"category":{"id":0,"name":""},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":12345,"category":{"id":0,"name":"string"},"name":"blabla","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752973,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752974,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752975,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752976,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752977,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752978,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752979,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752980,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752981,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752982,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752983,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752984,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752985,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752986,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752987,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752988,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752989,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752990,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752991,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752992,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752993,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752994,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752995,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854752996,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753006,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":2614,"category":{"id":0,"name":"string"},"name":"doggie-Vuh","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753015,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753016,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":2587,"category":{"id":0,"name":"string"},"name":"doggie-ufh","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753054,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753055,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753056,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753057,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753061,"name":"doggie","photoUrls":["string"],"tags":[],"status":"available"},{"id":2869,"category":{"id":0,"name":"string"},"name":"doggie-cyt","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753079,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753082,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753083,"name":"doggie","photoUrls":["string"],"tags":[],"status":"available"},{"id":9223372036854753085,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753086,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753116,"category":{"id":0,"name":"DemoAPIEmpower"},"name":"DemoAPIEmpower","photoUrls":["string"],"tags":[{"id":0,"name":"DemoAPIEmpower"}],"status":"available"},{"id":792151516,"category":{"id":1132131,"name":"test_category"},"name":"test_pet_for_api_tool","photoUrls":["http://example.com/photo.jpg"],"tags":[{"id":0,"name":"test_tag"}],"status":"available"},{"id":9223372036854753118,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753119,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":33710,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854753122,"name":"siyaan","photoUrls":[],"tags":[],"status":"available"},{"id":281,"category":{"id":195,"name":"dog"},"name":"Bret","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854753149,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":36,"category":{"id":419,"name":"dog"},"name":"Meaghan","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854753180,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753181,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9886,"category":{"id":0,"name":"string"},"name":"doggie-NcY","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753185,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753188,"category":{"id":0,"name":"string"},"name":"abcd","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":3349,"category":{"id":0,"name":"string"},"name":"doggie-RhP","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753194,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":6891,"category":{"id":0,"name":"string"},"name":"doggie-oiU","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753204,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753205,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":112233,"category":{"id":30,"name":"Eq-dog"},"name":"Postman","photoUrls":["URLLink"],"tags":[{"id":10,"name":"Doberman"}],"status":"available"},{"id":9223372036854753211,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753215,"category":{"id":0,"name":"string"},"name":"Puff","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753218,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":1245,"category":{"id":1245,"name":"xyz"},"name":"xyz","photoUrls":["test"],"tags":[],"status":"available"},{"id":202382,"name":"Pet202382","photoUrls":[],"tags":[],"status":"available"},{"id":4,"category":{"id":4,"name":"Reptiles"},"name":"Max","photoUrls":["https://example.com/max1.jpg","https://example.com/max2.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":55,"category":{"id":0,"name":"string"},"name":"runneradmin","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":56512407,"category":{"id":-66758187,"name":"tempor ex consectetur irure"},"name":"doggie","photoUrls":["cillum minim occaecat","culpa adipisicing"],"tags":[{"id":-94445891,"name":"elit nostrud et Excepteur"},{"id":5465297,"name":"ea ex in"}],"status":"available"},{"id":730708991,"category":{"id":1132131,"name":"test_category"},"name":"test_pet_for_api_tool","photoUrls":["http://example.com/photo.jpg"],"tags":[{"id":0,"name":"test_tag"}],"status":"available"},{"id":11041992,"category":{"id":2,"name":"cat"},"name":"pasha","photoUrls":[],"tags":[],"status":"available"},{"id":96205,"category":{"id":324749,"name":"wUvpbeZc"},"name":"abcd","photoUrls":["bwVhxa"],"tags":[{"id":915267,"name":"wCuJCtoF"}],"status":"available"},{"id":20250704,"category":{"id":0,"name":"chien"},"name":"doggie","photoUrls":["https://example.com/photo.jpg"],"tags":[{"id":0,"name":"tag"}],"status":"available"},{"id":230,"category":{"id":240,"name":"maxi"},"name":"doggie","photoUrls":["https://thumbor.forbes.com/thumbor/fit-in/1290x/https://www.forbes.com/advisor/wp-content/uploads/2023/07/top-20-small-dog-breeds.jpeg.jpg"],"tags":[{"id":120,"name":"amith"}],"status":"available"},{"id":78731,"category":{"id":2,"name":"Dog"},"name":"Bruno","photoUrls":[""],"tags":[{"id":202,"name":"Bruno"}],"status":"available"},{"id":101101,"category":{"id":1,"name":"test-pet"},"name":"reksio","photoUrls":["http://example.com/pet/1.jpg","http://example.com/pet/2.jpg"],"tags":[{"id":1,"name":"reksio"},{"id":2,"name":"pluto"}],"status":"available"},{"id":9223372036854753224,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":9223372036854753226,"category":{"id":0,"name":"whataBoo"},"name":"doggie","photoUrls":["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-photos%2Fdog&psig=AOvVaw3BWM19LrBa3MyNcQygKfJV&ust=1751708323461000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOiUxZT0oo4DFQAAAAAdAAAAABAE"],"tags":[{"id":0,"name":"tgaName"}],"status":"available"},{"id":9223372036854753230,"name":"doggie","photoUrls":["string"],"tags":[],"status":"available"},{"id":9223372036854753235,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":9223372036854753236,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753237,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753238,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":9223372036854753241,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":9223372036854753247,"category":{"id":0},"photoUrls":[null],"tags":[{"id":0}],"status":"available"},{"id":9223372036854753256,"category":{"id":0,"name":"whataBoo"},"name":"doggie","photoUrls":["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-photos%2Fdog&psig=AOvVaw3BWM19LrBa3MyNcQygKfJV&ust=1751708323461000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOiUxZT0oo4DFQAAAAAdAAAAABAE"],"tags":[{"id":0,"name":"tgaName"}],"status":"available"},{"id":1203,"category":{"id":1,"name":"Cat"},"name":"Mia","photoUrls":["string"],"tags":[{"id":1,"name":"Cat"}],"status":"available"},{"id":9223372036854753260,"category":{"id":0,"name":"whataBoo"},"name":"doggie","photoUrls":["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.vecteezy.com%2Ffree-photos%2Fdog&psig=AOvVaw3BWM19LrBa3MyNcQygKfJV&ust=1751708323461000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOiUxZT0oo4DFQAAAAAdAAAAABAE"],"tags":[{"id":0,"name":"tgaName"}],"status":"available"},{"id":9223372036854753263,"category":{"id":0},"photoUrls":[null],"tags":[{"id":0}],"status":"available"},{"id":9223372036854753265,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":9223372036854753271,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753273,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":9223372036854753280,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":9223372036854753285,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":9223372036854753291,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753292,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753306,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753308,"category":{"id":0,"name":"562"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753309,"category":{"id":0,"name":"643"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753318,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753326,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":123123123123,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":111,"category":{"id":1,"name":"<String>"},"name":"doggie","photoUrls":["{}"],"tags":[{"id":1,"name":"<String>"}],"status":"available"},{"id":9223372036854753330,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753347,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":4567,"category":{"id":1,"name":"mammal"},"name":"cotton","photoUrls":["string"],"tags":[{"id":2,"name":"lovely"}],"status":"available"},{"id":1488148814881488,"category":{"id":0,"name":"string"},"name":"fishtest","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":91,"category":{"id":91,"name":"Rob"},"name":"Sean","photoUrls":["string"],"tags":[{"id":91,"name":"Jay"}],"status":"available"},{"id":201,"category":{"id":201,"name":"Юки"},"name":"doggie","photoUrls":["https://img.freepik.com/premium-photo/siberian-haski-dog-snow-looks-around-high-quality-photo-winter-husky-dog_112397-543.jpg"],"tags":[{"id":201,"name":"Хаски"}],"status":"available"},{"id":51780,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":10111213,"category":{"id":0,"name":"string"},"name":"ebanayagnida","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":1751628003746,"category":{"id":10,"name":"Cats"},"name":"Funny","photoUrls":["string"],"tags":[{"id":1,"name":"blue and brown"},{"id":2,"name":"green eyes"},{"id":3,"name":"cute"}],"status":"available"},{"id":1751628008637,"category":{"id":10,"name":"Cats"},"name":"Funny","photoUrls":["string"],"tags":[{"id":1,"name":"blue and brown"},{"id":2,"name":"green eyes"},{"id":3,"name":"cute"}],"status":"available"},{"id":1751628014154,"category":{"id":10,"name":"Cats"},"name":"Funny","photoUrls":["string"],"tags":[{"id":1,"name":"blue and brown"},{"id":2,"name":"green eyes"},{"id":3,"name":"cute"}],"status":"available"},{"id":420000000,"category":{"id":1,"name":"canine"},"name":"Magic","photoUrls":[],"tags":[],"status":"available"},{"id":642,"name":"Sonya","photoUrls":["string"],"tags":[{"id":4487,"name":"string"}],"status":"available"},{"id":123123123,"category":{"id":3,"name":"Birds"},"name":"Bobik","photoUrls":["https://example.com/bobik.jpg"],"tags":[{"id":4,"name":"Playful"}],"status":"available"},{"id":223,"category":{"id":0,"name":"Kuzia"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":233,"category":{"id":0,"name":"Kuzia"},"name":"cat","photoUrls":["string"],"tags":[{"id":432,"name":"Pop"}],"status":"available"},{"id":22584,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":99999,"category":{"id":292813,"name":"test-pet"},"name":"reksio","photoUrls":["http://example.com/pet/1.jpg","http://example.com/pet/2.jpg"],"tags":[{"id":3082477,"name":"reksi0"},{"id":1320271,"name":"plut0"}],"status":"available"},{"id":2321,"category":{"id":0,"name":""},"name":"cat","photoUrls":["string"],"tags":[{"id":432,"name":"Pop"}],"status":"available"},{"id":10861,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":9223372016900071540,"category":{"id":0,"name":"string"},"name":"jimmy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":7023,"category":{"id":22,"name":"dogs"},"name":"Fluffy","photoUrls":[],"tags":[],"status":"available"},{"id":9223372036854753369,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9074181,"category":{"id":0,"name":"tomasz"},"name":"Tomasz Lewandowski","photoUrls":["https://www.sleepmed.pl/sennik-czarny-pies-co-oznacza-sen-o-czarnym-psie/"],"tags":[{"id":0,"name":"Tomasz"}],"status":"available"},{"id":821128,"category":{"id":0,"name":"dinosaur"},"name":"Spinosaurus","photoUrls":["string"],"tags":[{"id":0,"name":"dinosaur"}],"status":"available"},{"id":123456,"category":{"id":0,"name":"Cat"},"name":"Boncuk","photoUrls":["string"],"tags":[{"id":0,"name":"My cute cat"}],"status":"available"},{"id":2555,"category":{"id":0,"name":"bird"},"name":"tweety","photoUrls":["cute bird"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":40,"category":{"id":10,"name":"Cat"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":70,"category":{"id":10,"name":"Cat"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":2,"category":{"id":0,"name":"string"},"name":"Snoopy","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":2345678,"category":{"id":0,"name":"Cat"},"name":"Duman","photoUrls":["string"],"tags":[{"id":0,"name":"My lovely cat"}],"status":"available"},{"id":1234321,"category":{"id":0,"name":"Cat"},"name":"Cotton","photoUrls":["string"],"tags":[{"id":0,"name":"My lovely cat"}],"status":"available"},{"id":9223372036854753382,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":50003000,"category":{"id":0,"name":"cat"},"name":"LADY","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":12121,"category":{"id":0,"name":"string"},"name":"TestPetName","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":555111222333,"category":{"id":0,"name":"string"},"name":"Eddie41","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753383,"category":{"id":0,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":1,"category":{"id":1,"name":"string"},"name":"doggie","photoUrls":["string"],"tags":[{"id":1,"name":"string"}],"status":"available"},{"id":9223372036854753396,"category":{"id":0,"name":"string"},"name":"fish","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"},{"id":9223372036854753406,"category":{"id":0,"name":"DemoAPIEmpower"},"name":"DemoAPIEmpower","photoUrls":["string"],"tags":[{"id":0,"name":"DemoAPIEmpower"}],"status":"available"},{"id":9223372036854753408,"category":{"id":0,"name":"552"},"name":"doggie","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"}]%                                                
+ksu@MacBook-Air-Borisova ~ % curl -X 'POST' \
+  'https://petstore.swagger.io/v2/user/createWithList' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '[
+  {
+    "id": 333113,
+    "username": "KVVV",
+    "firstName": "KVVIVNA",
+    "lastName": "KVVVV",
+    "email": "123438@exam.com",
+    "password": "12345pas",
+    "phone": "908277282",
+    "userStatus": 1
+  }
+]'
+{"code":200,"type":"unknown","message":"ok"}%                                   
+ksu@MacBook-Air-Borisova ~ % 
